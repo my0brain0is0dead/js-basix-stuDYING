@@ -1,9 +1,9 @@
-function openPopup() {
-    var popup = document.getElementById("popup");
+function openPopup(selectorId) {
+    const popup = document.querySelector(`#${selectorId}`);
     popup.style.display = "block";
 }
   
-function closePopup() {
-    var popup = document.getElementById("popup");
+function closePopup(selectorId) {
+    const popup = document.querySelector(`#${selectorId}`);
     popup.style.display = "none";
 }
