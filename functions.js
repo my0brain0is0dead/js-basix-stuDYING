@@ -37,3 +37,22 @@ function incrementCopyAge (person) {
 
 const updatedBob = incrementCopyAge(Bob)
 console.log(updatedBob.age)
+
+// функциональное выражение (анонимная функция)
+// обычно используется в качестве колбэк функции
+
+const zxc = function(a, b) {
+    const c = summation(a, b)
+    return c
+}
+
+console.log(zxc(76, 22))
+
+// стрелочная функция
+
+const son = (pipi, pupu, check) => {
+    const multiply = pipi * pupu * check
+    return multiply
+}
+
+console.log(son(2, 65, 9128))
