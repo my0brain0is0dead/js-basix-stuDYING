@@ -14,6 +14,10 @@ function printMyName() {
 } 
 setTimeout(printMyName, 5000)
 
+setTimeout(() => {
+    console.log('Delayed message')
+}, 1000)
+
 /*
 я чувствую что у этого есть куча хороших приминений
 но ни одного я пока придумать не могу
