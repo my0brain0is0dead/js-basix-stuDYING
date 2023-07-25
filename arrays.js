@@ -21,3 +21,24 @@ const myObject = {
 
 console.log(myObject)
 console.log(myArray)
+
+//основные методы массива
+
+myArray.push(5) //добавляет элемент в конец массива
+console.log(myArray)
+
+let removedElem = myArray.pop() //вырезает последний элемент в массиве и возвращает его
+console.log(myArray)
+console.log(removedElem)
+
+myArray.unshift(0) //добавляет элемент в начало массива
+console.log(myArray)
+
+let removedFirst = myArray.shift() //вырезает первый элемент массива
+console.log(myArray)
+console.log(removedFirst)
+
+myArray.forEach(el => console.log(el * 2)) //применяет функцию к каждому элементу массива
+const newArray = myArray.map((el) => el * 4) //применяет функцию к каждому элементу массива и при этом возвращает новый массив
+console.log(newArray)
+console.log(myArray) //при map оригинальный массив не меняется 
