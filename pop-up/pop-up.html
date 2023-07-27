@@ -17,13 +17,16 @@
         </div>
     </div>
 
+    <button class="btn" id="pop-up-button" onclick="openPopup('kissing')">Тык тык тык тык</button>
+    <div class="popup" id='kissing'>
+        <div class="popup-content">
+            <span class="close" onclick="closePopup('kissing')">&times;</span>
+            <h3 id="">уф..</h3>
+            <img class="image" src="source/EG2DxeSU0AEqbrn.jpeg">
+        </div>
+    </div>
+
     <script>
-        const data = {
-        "imagePath": "source/241d753d492b4a5b2bfe142f38687a25.jpeg",
-        "btnName": "Тык",
-        "divHeader": "Наслаждайся"
-        }
-        
         function placeData(props) {
         props = JSON.parse(JSON.stringify(props))
         //деструктуризация item на свойства
@@ -40,9 +43,12 @@
         headerElement.innerText = divHeader
         imgElement.setAttribute('src', imagePath)
         }
+    </script>
+    <script>
+        const data = {
+        "imagePath": "source/241d753d492b4a5b2bfe142f38687a25.jpeg","btnName":"Тык","divHeader":"Наслаждайся"}
         placeData(data)
     </script>
     <script src="pop-up.js" async></script>
-
 </body>
 </html>
