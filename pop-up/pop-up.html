@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="pop-up-styles.css" type="text/css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Модальное окно</title>
+    <title>Modal window</title>
 </head>
 <body>
     <button class="btn" id="pop-up-button" onclick="openPopup('yukino')"></button>
@@ -15,33 +15,30 @@
             <img class="image">
         </div>
     </div>
-
     <script>
-        const data = {"divId":"yukino","imagePath":"source/241d753d492b4a5b2bfe142f38687a25.jpeg","btnName":"Название кнопки","divHeader":"Заголовок div"}
+        const data = {
+        "imagePath": "source/241d753d492b4a5b2bfe142f38687a25.jpeg",
+        "btnName": "Название кнопки",
+        "divHeader": "Заголовок модального окна"
+    }
         
-        const parseData = function(data) {
-            //парсинг data
-            return JSON.parse(data)
-        }
-
-        const placeData = function(item) {
-
+        function placeData(props) {
+        props = JSON.parse(JSON.stringify(props))
         //деструктуризация item на свойства
-        const { divId, imagePath, btnName, divHeader } = item
+        const { imagePath, btnName, divHeader } = props
         
         //доступ к элементам разметки
-        const buttonElement = document.querySelector('#pop-up-button');
-        const popupElement = document.querySelector('.popup');
-        const headerElement = popupElement.querySelector('h3');
-        const imgElement = popupElement.querySelector('.image');
+        const buttonElement = document.querySelector('#pop-up-button')
+        const popupElement = document.querySelector('.popup')
+        const headerElement = popupElement.querySelector('h3')
+        const imgElement = popupElement.querySelector('.image')
         
         //заполнение элементов
-        buttonElement.innerText = btnName;
-        headerElement.innerText = divHeader;
-        imgElement.setAttribute('src', imagePath);
+        buttonElement.innerText = btnName
+        headerElement.innerText = divHeader
+        imgElement.setAttribute('src', imagePath)
         }
-        const item = parseData(JSON.stringify(data));
-        placeData(item);
+        placeData(data)
     </script>
     <script src="pop-up.js" async></script>
 </body>
