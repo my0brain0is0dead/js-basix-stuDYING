@@ -7,39 +7,9 @@
     <title>Modal window</title>
 </head>
 <body>
-    <button class="btn" id="pop-up-button" onclick="openPopup('yukino')"></button>
-    <div class="popup" id='yukino'>
-        <div class="popup-content">
-            <span class="close" onclick="closePopup('yukino')">&times;</span>
-            <h3 id=""></h3>
-            <img class="image">
-        </div>
-    </div>
-    <script>
-        const data = {
-        "imagePath": "source/241d753d492b4a5b2bfe142f38687a25.jpeg",
-        "btnName": "Название кнопки",
-        "divHeader": "Заголовок модального окна"
-    }
-        
-        function placeData(props) {
-        props = JSON.parse(JSON.stringify(props))
-        //деструктуризация item на свойства
-        const { imagePath, btnName, divHeader } = props
-        
-        //доступ к элементам разметки
-        const buttonElement = document.querySelector('#pop-up-button')
-        const popupElement = document.querySelector('.popup')
-        const headerElement = popupElement.querySelector('h3')
-        const imgElement = popupElement.querySelector('.image')
-        
-        //заполнение элементов
-        buttonElement.innerText = btnName
-        headerElement.innerText = divHeader
-        imgElement.setAttribute('src', imagePath)
-        }
-        placeData(data)
-    </script>
+    <div id="placeholder"></div>
+    <script src="json-use.js" async></script>
     <script src="pop-up.js" async></script>
+
 </body>
 </html>
